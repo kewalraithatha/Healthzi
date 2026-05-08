@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Healthzi — Know What's In Your Food</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0faf4;
+      color: #1a1a1a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      text-align: center;
+    }
+    .logo { font-size: 2.5rem; font-weight: 800; color: #2ecc71; margin-bottom: 10px; }
+    .tagline { font-size: 1.6rem; font-weight: 700; max-width: 600px; margin-bottom: 15px; }
+    .sub { font-size: 1rem; color: #555; max-width: 500px; margin-bottom: 35px; line-height: 1.6; }
+    form { display: flex; flex-direction: column; align-items: center; gap: 12px; width: 100%; max-width: 400px; }
+    input[type="email"] {
+      width: 100%; padding: 14px 18px; border: 2px solid #2ecc71;
+      border-radius: 8px; font-size: 1rem; outline: none;
+    }
+    button {
+      width: 100%; padding: 14px; background: #2ecc71; color: white;
+      border: none; border-radius: 8px; font-size: 1rem;
+      font-weight: 700; cursor: pointer;
+    }
+    button:hover { background: #27ae60; }
+    .trust { margin-top: 15px; font-size: 0.85rem; color: #888; }
+    .flag { font-size: 1.2rem; }
+  </style>
+</head>
+<body>
+  <div class="logo">🌿 Healthzi</div>
+  <h1 class="tagline">Know What's In Your Food — Before You Buy It.</h1>
+  <p class="sub">
+    Healthzi is the Canadian food scanner app launching soon.
+    Scan any product, understand every ingredient, and make choices that are right for your body.
+  </p>
+ 
+  <!-- EMAIL FORM — connects to Formspree (free) -->
+  <form action=https://formspree.io/f/YOUR_FORM_ID method="POST">
+    <input type="email" name="email" placeholder="Enter your email address" required />
+    <button type="submit">🚀 Get Early Access</button>
+  </form>
+ 
+  <p class="trust"><span class="flag">🇨🇦</span> Built for Canadians · Launching 2026 · No spam, ever.</p>
+</body>
+</html>
