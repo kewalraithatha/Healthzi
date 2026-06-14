@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NTSJ4ZKP');</script>
-<!-- End Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NTSJ4ZKP');</script>
+  <!-- End Google Tag Manager -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Healthzi — Know What's In Your Food</title>
@@ -41,26 +41,59 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     button:hover { background: #27ae60; }
     .trust { margin-top: 15px; font-size: 0.85rem; color: #888; }
     .flag { font-size: 1.2rem; }
+    .success-msg {
+      display: none;
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      border-radius: 8px;
+      padding: 16px 24px;
+      font-size: 1rem;
+      max-width: 400px;
+      line-height: 1.5;
+    }
   </style>
 </head>
 <body>
-   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NTSJ4ZKP"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NTSJ4ZKP"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <div class="logo">🌿 Healthzi</div>
-  <h1 class="tagline"> Healthy Choices Made Simple For Your Whole Family.</h1>
+  <h1 class="tagline">Healthy Choices Made Simple For Your Whole Family.</h1>
   <p class="sub">
-    Healthzi helps Canadian families understand what's really in the products they buy -
+    Healthzi helps Canadian families understand what's really in the products they buy —
     food, skincare, and everything in between. Launching soon.
   </p>
- 
-  <!-- EMAIL FORM — connects to Formspree (free) -->
-  <form action=https://formspree.io/f/mlgzpllz method="POST">
-    <input type="email" name="email" placeholder="Enter your email address" required />
+
+  <!-- EMAIL FORM — connects to Brevo -->
+  <form id="sib-form" method="POST"
+    action="https://98261097.sibforms.com/serve/MUIFAINNKEjFZ0BJB-cN9wc0-u2xVaSdw4sOtsn1vlRBhzD76uhRmtIgJXe2mNBFGGBXOJCHg3ZaCM1Lt3PhPsXz-fIBFPP-wSvpBbYWFSJb59WyutDr9xKfhmD4tDDjvbnJWY1PNb0iOPRY7Uyhg2q9a5sr-SQn50ipAKT07EiyFz5Y_D3PY-R3L6L74Himu6R7CYRT7VoOqIClyw==">
+    <input
+      type="email"
+      id="EMAIL"
+      name="EMAIL"
+      placeholder="Enter your email address"
+      autocomplete="email"
+      required />
     <button type="submit">🚀 Get Early Access</button>
+    <input type="hidden" name="locale" value="en" />
+    <input type="hidden" name="html_type" value="simple" />
   </form>
- 
+
+  <div class="success-msg" id="success-msg">
+    ✅ You're on the list! Check your inbox — we sent you a message.
+  </div>
+
   <p class="trust"><span class="flag">🇨🇦</span> Built for Canadians · Launching 2026 · No spam, ever.</p>
+
+  <script>
+    if (window.location.search.includes('signup=success')) {
+      document.getElementById('sib-form').style.display = 'none';
+      document.getElementById('success-msg').style.display = 'block';
+    }
+  </script>
+
 </body>
 </html>
